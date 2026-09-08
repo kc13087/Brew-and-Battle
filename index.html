@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#281d3e" />
+    <title>Brew &amp; Battle</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <section id="home-screen" class="screen active" aria-labelledby="cafe-title">
+        <div class="cafe-sky" aria-hidden="true"><span></span><span></span><span></span></div>
+        <header class="top-bar">
+          <div><p class="eyebrow">DAY 1 · MORNING</p><h1 id="cafe-title">Moonwhisk Café</h1></div>
+          <div class="coin-pill" aria-label="12 star coins">✦ <strong>12</strong></div>
+        </header>
+        <div class="cafe-scene" aria-label="A cozy fantasy café">
+          <div class="window"><i></i><i></i></div>
+          <div class="shelf"><span>🫙</span><span>📚</span><span>🍯</span></div>
+          <div class="plant">✿</div>
+          <div class="counter"><div class="steam">〰 〰</div><div class="cauldron">☕</div><p>OPEN FOR ADVENTURE</p></div>
+        </div>
+        <section class="welcome-card">
+          <p class="eyebrow">TODAY'S SPECIAL</p>
+          <h2>Warm hearts. Brave quests.</h2>
+          <p>Pack your favorite ingredients and serve the forest's hungriest visitors.</p>
+          <button id="start-button" class="primary-button">Start the first brew <span>›</span></button>
+        </section>
+        <nav class="bottom-nav" aria-label="Main navigation">
+          <button class="nav-item selected" type="button" aria-label="Café home">⌂<span>Café</span></button>
+          <button class="nav-item locked" type="button" aria-label="Recipe book, coming soon">▤<span>Recipes</span></button>
+          <button class="nav-item locked" type="button" aria-label="Café customization, coming soon">✦<span>Decor</span></button>
+        </nav>
+      </section>
+
+      <section id="battle-screen" class="screen" aria-labelledby="battle-title" hidden>
+        <header class="battle-header"><button id="quit-button" class="icon-button" type="button" aria-label="Return to café">‹</button><div><p class="eyebrow">MOSSY PATH · LEVEL 1</p><h1 id="battle-title">A hungry guest!</h1></div><div id="round-badge" class="round-badge">1 / 3</div></header>
+        <section class="battlefield">
+          <div class="enemy-area">
+            <div id="enemy-art" class="enemy-art" aria-hidden="true">🟢</div>
+            <div class="enemy-info"><div class="enemy-name"><span id="enemy-name">Moss Munchkin</span><span id="patience-label">Patience</span></div><div class="meter"><span id="patience-bar"></span></div><p id="enemy-line">"Something warm, please!"</p></div>
+          </div>
+          <div class="brew-station"><div class="sparkles" aria-hidden="true">✦ · ✦</div><div id="cauldron-glow" class="cauldron-big">☕</div><p id="brew-status">Choose ingredients to brew.</p></div>
+        </section>
+        <section class="recipe-panel" aria-label="Order recipe">
+          <div><p class="eyebrow">ORDER</p><h2 id="order-name">Honey Hearth Tea</h2></div>
+          <div id="recipe-chips" class="recipe-chips"></div>
+        </section>
+        <section class="ingredient-panel" aria-label="Brew ingredients">
+          <p class="eyebrow">ADD TO CAULDRON <span id="selection-count">0 / 2</span></p>
+          <div id="ingredient-list" class="ingredient-list"></div>
+          <button id="serve-button" class="primary-button serve-button" disabled>Serve brew <span>✦</span></button>
+        </section>
+      </section>
+
+      <section id="result-screen" class="screen result-screen" aria-labelledby="result-title" hidden>
+        <div id="result-icon" class="result-icon">✦</div><p id="result-kicker" class="eyebrow">LEVEL COMPLETE</p><h1 id="result-title">The café cheers!</h1><p id="result-copy">Every guest left with a full heart.</p><div class="reward-card"><span>STAR COINS</span><strong id="reward-value">+6</strong></div><button id="continue-button" class="primary-button">Return to café <span>›</span></button></section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
